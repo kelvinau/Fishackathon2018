@@ -12,3 +12,6 @@ A platform for sellers to keep track of prices and have a sense of the general t
 -- Regional average prices of fish in a yearly line chart view
 - Notification  
 -- Monthly SMS notification for market trends and news
+
+Team Members  
+Kelvin Au, Mason Mohkami, Tiffany Wu ([tiffwu1027](https://github.com/tiffwu1027)), and Stephanie Wong ([stephlolxd](https://github.com/stephlolxd))
