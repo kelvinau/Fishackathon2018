@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link href="css/app.min.css" rel="stylesheet" type="text/css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArdt2lyIZGSJQxm21GV6yKZFNqzfIQAc4"></script>
+</head>
+
+<body ng-app="fishackathon2018-challenge7" ng-class="{'loaded': $root.firstLoaded === true}">
+    <div class="body-container">
+        <div class="topbar" ng-if="$root.user" ng-controller="topbarCtrl">
+                <div class="name" ng-bind="$root.user.name || 'FirstName LastName'"></div>
+                <div class="right-btn-container">
+                    <button type="button" class="btn btn-primary notification-btn" 
+                        ng-bind="notificationOn ? 'Notification On' : 'Notification Off'"
+                        ng-model="notificationOn"
+                        ng-click="saveNotificationSetting($event)"
+                        uib-btn-checkbox btn-checkbox-true="true" btn-checkbox-false="false">
+                    </button>
+                    <button class="btn btn-primary" ng-click="logout()">Logout</button>
+                </div>
+            </div>
+            <div class="container main">
+                <div ng-controller="navbarCtrl">
+                    <div class="row navbar">
+                            <div class="col-xs-6" ng-if="!$root.user">
+                                <button type="btn" class="btn btn-primary" ui-sref="main.login" ui-sref-active="active">Login</button>
+                            </div>
+                            <div class="col-xs-6" ng-if="!$root.user">
+                                <button type="btn" class="btn btn-primary" ui-sref="main.signup">Sign Up</button>
+                            </div>
+                            <div class="col-xs-4" ng-if="$root.user">
+                                <button type="btn" class="btn btn-primary" ui-sref="main.list">All Records</button>
+                            </div>
+                            <div class="col-xs-4" ng-if="$root.user">
+                                <button type="btn" class="btn btn-primary" ui-sref="main.submit">Submit New Record</button>
+                            </div>
+                            <div class="col-xs-4" ng-if="$root.user">
+                                <button type="btn" class="btn btn-primary" ui-sref="main.overview">Regional Market Overview</button>
+                            </div>
+                    </div>
+                </div>
+                <ui-view></ui-view>
+            </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.7/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.0.2/echarts.min.js"></script>
+    <script src="js/app.js"></script>  
+    <script src="js/services.js"></script> 
+    <script src="js/routes.js"></script>
+</body>
+
+</html>

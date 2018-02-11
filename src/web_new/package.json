@@ -1,0 +1,27 @@
+{
+  "name": "fishackathon2018-challenege7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server ./static"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/kelvinau/fishackathon2018-challenege7.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/kelvinau/fishackathon2018-challenege7#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp": "^3.5.6",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-rename": "^1.2.0"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-watch": "^5.0.0"
+  }
+}

@@ -1,0 +1,24 @@
+<div class="list-container">
+    <div class ="list">
+        <table id="list-table" class="display" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+                <th>Fish type</th>
+                <th>Price</th>
+                <th>Date caught</th>
+                <th>Date sold</th>
+                <th>Seller</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="row in fishrows">
+                <td>{{row.fish}}</td>
+                <td>{{row.price}}</td>
+                <td>{{row.dateCaught}}</td>
+                <td>{{row.dateSold}}</td>
+                <td>{{row.seller}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

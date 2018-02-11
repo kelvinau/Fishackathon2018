@@ -1,0 +1,44 @@
+<div class="submit-container form-container">
+    <div class="row">
+        <div class="col-xs-5 column">
+            <h4>Fish name  </h4>
+        </div>
+        <div class="col-xs-7">
+            <div class="btn-group" uib-dropdown is-open="status.isopen">
+                <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle >
+                    {{fishname || 'Choose Name'}} <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                    <li role="menuitem" ng-click="fishBtnClick(fish)" ng-repeat="fish in items"><a href="#">{{fish}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-5 column">
+            <h4>Caught Date</h4>
+        </div>
+        <div class="col-xs-7">
+            <div class="input-group form-control">
+                <input type="text"  class ="date-container" uib-datepicker-popup ng-model="caught_date" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-5 column">
+            <h4>Price sold at</h4>
+        </div>
+        <div class="col-xs-7">
+            <input ng-model="price" class="form-control" type="text" placeholder="amount" name="price" required>
+        </div>
+    </div>
+
+    <div class="inner-container">
+        <button  type="submit" class="btn btn-primary" ng-click="submit()">Submit</button>
+    </div>
+</div>

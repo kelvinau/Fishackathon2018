@@ -1,0 +1,22 @@
+<div class="overview-container">
+    <div class="fish-dropdown">
+        <div class="btn-group" uib-dropdown is-open="status.isopen">
+            <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle >
+                {{fishChosen || 'Choose Fish'}}  <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                <li role="menuitem"  ng-click="fishDropdownClick(name, $event)" ng-repeat="name in fishNames">
+                    <a href="#">{{name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header">Locational Average Price</div>
+        <div id="map"></div>
+    </div>
+    <div class="section">
+        <div class="section-header">Monthly Average Price</div>
+        <div id="monthly_chart"></div>
+    </div>
+</div>

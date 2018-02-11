@@ -1,0 +1,40 @@
+application: challenge7-194821
+version: 12-add-logging
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+
+skip_files:
+ - ^(.*/)?#.*#$
+ - ^(.*/)?.*~$
+ - ^(.*/)?.*\.py[co]$
+ - ^(.*/)?.*/RCS/.*$
+ - ^(.*/)?\..*$
+ - ^(.*/)?.*/node_modules/.*$
+ - ^(.*/)?.*\.log$
+
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+- name: PIL
+  version: latest
+
+handlers:
+- url: /css
+  static_dir: src/web_new/static/css
+
+- url: /js
+  static_dir: src/web_new/static/js
+
+- url: /partial
+  static_dir: src/web_new/static/partial
+
+- url: /api/.*
+  script: main.app
+
+- url: (.*)
+  script: main.app

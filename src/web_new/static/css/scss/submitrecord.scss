@@ -1,0 +1,88 @@
+.submit-container {
+  .form-control {
+    width: 60%;
+  }
+  .date-container {
+    width: 100%;
+    border: none;
+    margin-top: 1%;
+  }
+
+  .column {
+    text-align: right;
+  }
+  
+  .col-xs-9 {
+    padding: 5px;
+  }
+
+
+  /*
+  input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+  }
+
+  /* Set a style for all buttons
+  .inner-container button {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+  }
+
+  .inner-container {
+    text-align: center;
+  }
+
+  .inner-container button:hover {
+    background-color: royalblue;
+  }
+
+  .full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+
+  .container {
+    padding: 30px;
+  }
+
+
+  /* Add Zoom Animation
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+  }
+
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+  /* Change styles for span and cancel button on extra small screens
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+  }
+  */
+
+}

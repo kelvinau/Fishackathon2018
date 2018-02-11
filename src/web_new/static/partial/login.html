@@ -1,0 +1,7 @@
+<div class="login-container form-container">
+    <input ng-model="phoneNo" class="form-control" type="text" placeholder="Phone Number" name="phoneNo" required>
+    <input ng-model="psw" class="form-control" type="password" placeholder="Password" name="psw" required>
+    <div class="inner-container">
+        <button ng-disabled="!phoneNo || !psw" type="submit" class="btn btn-primary" ng-click="login()">Login</button>
+    </div>
+</div>

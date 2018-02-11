@@ -1,0 +1,21 @@
+<div class="signup-container form-container">
+
+    <input ng-model="phoneNo" class="form-control" type="text" placeholder="Phone Number" name="phoneNo" required>
+    <input ng-model="name" class="form-control" type="text" placeholder="First and Last name" name="name" required>
+
+    <div class="btn-group location-dropdown" uib-dropdown is-open="status.isopen">
+        <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle >
+           {{locationChosen || 'Choose Your Location'}}  <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+            <li role="menuitem"  ng-click="locationBtnClick(place)" ng-repeat="place in locations"><a href="#">{{place}}</a></li>
+        </ul>
+    </div>
+    <br>
+
+
+    <input ng-model="psw" class="form-control" type="password" placeholder="Password" name="psw" required>
+    <div class="inner-container">
+        <button ng-disabled="!phoneNo || !psw || !locationChosen" type="submit" class="btn btn-primary" ng-click="signup()">Register</button>
+    </div>
+</div>
